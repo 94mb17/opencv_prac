@@ -59,7 +59,6 @@ while True:
     frameRGB = cv.cvtColor(frame, cv.COLOR_BGR2RGB)
 
     hands = bar(frameRGB)
-
     for hand in hands:
         
         y1 = int(hand[8][1]-padHeight/2)
