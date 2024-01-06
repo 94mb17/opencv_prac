@@ -26,11 +26,12 @@ while True:
         for l in results.pose_landmarks.landmark:
             land.append((int(l.x*640), int(l.y*480)))
     
-    print(land)
     #nose
-    cv.circle(frame, (land[0]), 5, (160, 0, 155), -1)
-    cv.circle(frame, (land[2]), 5, (120, 90, 155), -1)
-    cv.circle(frame, (land[5]), 5, (120, 90, 155), -1)
+        cv.circle(frame, (land[0]), 5, (160, 0, 155), -1)
+    #eyes
+        cv.circle(frame, (land[2]), 5, (120, 90, 155), -1)
+        cv.circle(frame, (land[5]), 5, (120, 90, 155), -1)
+        
     cv.imshow('Frame', frame)
 
     if cv.waitKey(1) & 0xFF == ord('d'):
